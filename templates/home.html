@@ -1,0 +1,54 @@
+{% block extrahead %}
+    <script type="text/javascript" src="/static/js/jquery-1.11.0.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/app.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<body>
+ <div class="dropdown">
+        <button class="dropbtn"><img src="/static/images/profile_user.png" width="25px"></button>
+        <div class="dropdown-content">
+            <a>{{name}}</a>
+            <a href="/logout/">Logout</a>
+        </div>
+ </div>
+  <h3>Simple Post Application</h3>
+ <div id="content_post">
+     <input class="content_post" type="text" name="title" id="title" value="" placeholder="write post title..." style="width: 600px;height: 40px;"/><br><br>
+     <textarea rows="6" cols="120" class="content_post" name="post" id="post" placeholder="Write something here..."></textarea>
+     <button type="submit" id="post-btn" class="btn btn-primary">Post</button>
+ </div>
+     <table class="table table-striped" id="content_list">
+         {% for queue in post_details_list %}
+         <tr>
+             <td>
+                 <input type="text" name="post_id" value="{{queue.post_id}}" style="display:none;" readonly/>
+                 <h4><strong>{{queue.title}}</strong></h4>
+                 <p>posted by: {{queue.author}}, {{queue.publish_time}}</p>
+                 {{queue.content}}
+                 {% if queue.your_like %}
+                    <br><button type="button" class="like" onclick="colorchange(this);" style="background:rgb(52, 152, 219);"> <!-- like -->
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                 {% else %}
+                    <br><button type="button" class="like" onclick="colorchange(this);" style="background:rgb(133, 193, 233);"> <!-- unlike -->
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                 {% endif %}
+                 <a class="like-list">{{queue.likes}}
+                 <ul class="list-categories">
+                     {% for name in queue.likes_name %}
+                         <li>{{name}}</li>
+                     {% endfor %}
+                 </ul>
+             </a>
+             </td>
+         </tr>
+         {% endfor %}
+      </table>
+
+<script src="/static/js/app.js"></script>
+</body>
+{% endblock %}

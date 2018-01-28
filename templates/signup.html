@@ -1,0 +1,98 @@
+
+{% block extrahead %}
+    <script type="text/javascript" src="/static/js/jquery-1.11.0.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/login.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<body>
+ <section class="login container-fluid ">
+<div class="panel panel-default jumbotron login">
+    <center><img class="Loginlogo" src="/static/images/django.sh-600x600.png"} ></center>
+    <br/>
+         <ul class="nav nav-tabs">
+             <li class="active"><a data-toggle="tab" href="#signin">Sign In</a></li>
+             <li><a data-toggle="tab" href="#signup">Sign Up</a></li>
+             <div class="tab-content">
+                  <div id="signin" class="tab-pane fade in active">
+			    			<div class="form-group" >
+			      				<div class="row">
+			        				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			          					<input type="text" class="form-control input-underline input-lg " name="email" id="email" value="" placeholder="Enter Email" required/>
+			        				</div>
+			      				</div>
+			      				<br/>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <input type="password" class="form-control input-underline input-lg " name="password"  id="password" value="" placeholder="Enter Password" required/>
+									</div>
+								</div>
+								<br/>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <button type="submit" class="full-width btn  button-loginscreen" id="signIn_Submit" >login </button>
+									</div>
+								</div>
+			      			</div>
+			      		<!--</form>-->
+                  </div>
+                  <div id="signup" class="tab-pane fade">
+			    			<div class="form-group" >
+			      				<div class="row">
+			        				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			          					<input type="text" class="form-control input-underline input-lg " name="first_name" id="first_name" value=""  placeholder="Enter Firstname" required/>
+			        				</div>
+			      				</div>
+			      				<br/>
+								<div class="row">
+			        				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			          					<input type="text" class="form-control input-underline input-lg " name="last_name" id="last_name" value=""  placeholder="Enter Lastname"/>
+			        				</div>
+			      				</div>
+			      				<br/>
+			      				<div class="row">
+			        				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			          					<input type="text" class="form-control input-underline input-lg " name="email" id="signup_email" value=""  placeholder="Enter Email" required/>
+			        				</div>
+			      				</div>
+			      				<br/>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <input type="password" class="form-control input-underline input-lg " name="password" id="signup_password" value=""  placeholder="Enter Password" required/>
+									</div>
+								</div>
+								<br/>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <input type="password" class="form-control input-underline input-lg " name="re_password"  id="re_password" value=""  placeholder="Re-Enter Password" required/>
+									</div>
+								</div>
+								<br/>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <input type="text" class="form-control input-underline input-lg " name="phone"  id="phone" value=""  placeholder="Enter contact number" required/>
+									</div>
+								</div>
+								<br/>
+
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <select class="form-control input-underline input-lg " name="gender" id="gender"><option selected>Male</option><option>Female</option></select>
+									</div>
+								</div>
+								<br/>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <button type="submit" class="full-width btn  button-loginscreen " id="signUp_Submit" >Create Account</button>
+									</div>
+								</div>
+			      			</div>
+                  </div>
+             </div>
+         </ul>
+ </div>
+ </section>
+<script src="/static/js/signup.js"></script> </body>
+{% endblock %}
