@@ -2,7 +2,7 @@
 
 ##Problem Statement:
    * user should be able to register/sign-in
-   * once sign-in, user should be able to to
+   * once sign-in, user should be able to do
       - create a post
       - like a post
       - unlike a post
