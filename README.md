@@ -9,6 +9,7 @@
       - view who all liked a post
    * likes should be unique
    * logout
+   
 ##Technology Used:
 
  **Front end:** Html, Javascript, Bootstrap
@@ -18,7 +19,7 @@
  **Database:** PostgreSQL
 
  * Used ajax for client server communication
- * Note:- Instead of django auth user, used separate user model and for authenticate used middleware.
+ * Note:- Instead of django auth user, used separate user model and for authentication used middleware.
         - Instead of serialization used manual validation method. 
         
 # django project setup and run on your local machine
